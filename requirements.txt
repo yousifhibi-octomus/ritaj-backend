@@ -6,3 +6,4 @@ django-cors-headers
 django-filter
 dj-rest-auth
 django-allauth
+requests
