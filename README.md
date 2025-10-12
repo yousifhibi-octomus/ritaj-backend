@@ -1,1 +1,0 @@
-# ritaj-clone-backend
