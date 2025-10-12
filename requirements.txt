@@ -7,3 +7,10 @@ django-filter
 dj-rest-auth
 django-allauth
 requests
+django
+allauth
+rest_framework
+django_filters
+dj_rest_auth
+whitenoise
+pyjwt
