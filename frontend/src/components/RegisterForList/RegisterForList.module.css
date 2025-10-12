@@ -1,0 +1,115 @@
+.container {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  direction: rtl;
+  width: 30%;
+  display: flex;
+    flex-direction: column;
+  align-self: center;
+  justify-self: center;
+    margin-top: 3%;
+}
+.title {
+  margin: 0 0 6px;
+  font-weight: 800;
+}
+.description {
+  margin: 0 0 16px;
+  color: #6b7280;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 12px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.input {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--color-accent-primary, #1f6feb);
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.12);
+}
+.radios {
+  display: flex;
+  gap: 12px;
+}
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.checkboxList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+}
+.checkboxItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.button {
+  background: var(--color-accent-primary, #1f6feb);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.success {
+  color: #065f46;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+@media (max-width: 720px) {
+  .row { grid-template-columns: 1fr; }
+  .checkboxList { grid-template-columns: 1fr; }
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr; /* one column */
+  gap: 12px;
+}
+.checkboxList {
+  display: grid;
+  grid-template-columns: 1fr; /* one column */
+  gap: 8px 12px;
+}
+.textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  resize: vertical;
+}
+.switch { display: inline-flex; align-items: center; gap: 6px; }

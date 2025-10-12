@@ -1,0 +1,189 @@
+.container {
+  direction: rtl;
+  width: 100%;
+  font-family: var(--font-arabic-body, system-ui);
+}
+
+/* Base search group */
+.searchGroup {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  background: var(--color-background-light);
+  border: 2px solid var(--color-border);
+  padding: .55rem .85rem;
+  border-radius: 14px;
+  transition: border-color .25s, box-shadow .25s, background-color .25s, max-width .35s ease;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Collapsible mode (initial collapsed) */
+.collapsible .searchGroup {
+  max-width: 46px;
+  padding: .55rem;
+  cursor: text;
+  overflow: hidden;
+}
+
+/* Make whole pill clickable (optional focus ring) */
+.collapsible .searchGroup:focus {
+  outline: none;
+}
+
+.searchImg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: .75;
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: opacity .25s;
+}
+
+/* Input + clear button collapsed state */
+.collapsible .searchInput,
+.collapsible .clearBtn {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  transition: opacity .25s ease, width .35s ease;
+}
+
+/* EXPANDED (when input focused or anything inside focused) */
+.collapsible .searchGroup:focus-within {
+  max-width: 420px;
+  background: #fff;
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px rgba(29,125,216,.15);
+  padding: .55rem .85rem;
+}
+
+@media (max-width: 600px) {
+  .collapsible .searchGroup:focus-within {
+    max-width: 100%;
+  }
+}
+
+/* Reveal input + button */
+.collapsible .searchGroup:focus-within .searchInput {
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  margin-inline-start: .35rem;
+}
+
+.collapsible .searchGroup:focus-within .clearBtn {
+  width: auto;
+  opacity: 1;
+  pointer-events: auto;
+  margin-inline-start: .25rem;
+  padding: .35rem .5rem;
+}
+
+/* Hover (give visual hint) */
+.collapsible .searchGroup:hover {
+  border-color: var(--color-accent-primary);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: .9rem;
+  font-family: inherit;
+  color: var(--color-text-body);
+  min-width: 0;
+  direction: rtl;
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-secondary);
+  opacity: .6;
+  font-size: .85rem;
+}
+
+.clearBtn {
+  border: none;
+  background: #eef1f4;
+  color: #555;
+  font-size: .7rem;
+  line-height: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.clearBtn:hover {
+  background: #d9dde2;
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  list-style: none;
+  margin: .25rem 0 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  max-height: 340px;
+  overflow-y: auto;
+  font-size: .85rem;
+  position: absolute;
+  inset-inline-start: 0;
+  width: 100%;
+  z-index: 40;
+  direction: rtl;
+}
+
+.suggestionItem {
+  padding: .55rem .85rem;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  cursor: pointer;
+  line-height: 1.2;
+  transition: background .15s, color .15s;
+  background: #fff;
+}
+
+.suggestionItem:hover,
+.suggestionItem:focus,
+.suggestionItem.active {
+  background: var(--color-background-light);
+}
+
+.title {
+  font-weight: 500;
+  color: var(--color-text-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tags {
+  font-size: .7rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.noResults {
+  margin-top: .35rem;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: .7rem .9rem;
+  font-size: .75rem;
+  color: var(--color-text-secondary);
+  position: absolute;
+  width: 100%;
+  z-index: 30;
+  direction: rtl;
+}

@@ -1,0 +1,38 @@
+ .container {
+  width: min(1200px, 96%);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+  direction: rtl;
+ }
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0 1rem;
+}
+
+.viewToggle { display: flex; align-items: center; gap: 0.5rem; }
+.viewLabel { color: var(--color-text-subheading); }
+.toggleBtn {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-body);
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+}
+.toggleBtn.active { background: var(--color-accent-primary); color: var(--color-button-primary-text); border-color: var(--color-accent-primary); }
+
+ .content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1rem;
+  margin-top: 2%;
+ }
+
+ @media (max-width: 900px) {
+  .content { grid-template-columns: 1fr; }
+ }
+.joinList {
+    margin-top: 10%;
+}

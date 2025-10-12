@@ -1,0 +1,25 @@
+.button {
+  position: fixed;            /* make it float */
+  bottom: 60px;               /* distance from bottom */
+  right: 30px;                /* distance from right */
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;         /* circle */
+  padding: 0;
+  background: transparent;    /* so the image is the button */
+  cursor: pointer;
+  overflow: hidden;           /* crop the image to circle */
+  z-index: 9999;              /* keep above other elements */
+}
+
+.button:hover {
+  opacity: 0.8;               /* simple hover effect */
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fill circle */
+  border-radius: 50%;         /* makes icon circular */
+}

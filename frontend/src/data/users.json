@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "username": "Admin",
+    "role": "admin",
+    "email": "admin@magazine.com",
+    "name": "admin",
+    "bio": "المسؤول عن إدارة المجلة ومراجعة كل المقالات.",
+    "avatar": "/images/users/admin.png",
+    "socials": [
+      { "name": "Instagram", "link": "#", "icon": "/icons/instagram.png" },
+      { "name": "Twitter", "link": "#", "icon": "/icons/x.png" },
+      { "name": "LinkedIn", "link": "#", "icon": "/icons/linkedin.png" }
+    ],
+    "articles": [1, 2, 3, 4],
+    "saved": [2, 5]
+  },
+  {
+    "id": 2,
+    "username": "admin",
+    "role": "editor",
+    "email": "editor@magazine.com",
+    "profile": {
+      "name": "Main Editor",
+      "bio": "Head editor of the architectural magazine, responsible for reviewing and publishing articles.",
+      "avatar": "/images/users/editor.png"
+    },
+    "socials": [],
+    "articles": [1, 2, 3],
+    "saved": []
+  },
+  {
+    "id": 3,
+    "username": "yousif_writer",
+    "role": "writer",
+    "email": "yousif@magazine.com",
+    "profile": {
+      "name": "Yousif Hibi",
+      "bio": "Architectural writer and content creator, focusing on urban design and restoration.",
+      "avatar": "/images/users/yousif.png"
+    },
+    "socials": [],
+    "articles": [4, 5],
+    "saved": []
+  },
+  {
+    "id": 4,
+    "username": "guest_user",
+    "role": "reader",
+    "email": "guest@magazine.com",
+    "profile": {
+      "name": "Guest User",
+      "bio": "Reader of the magazine, interested in architecture and design.",
+      "avatar": "/images/users/guest.png"
+    },
+    "socials": [],
+    "articles": [],
+    "saved": []
+  },
+  {
+    "id": 6,
+    "username": "ألين غريفيثس",
+    "role": "reader",
+    "email": "allen.griffiths@example.com",
+    "profile": {
+      "name": "ألين غريفيثس",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [1],
+    "saved": [2, 3]
+  },
+  {
+    "id": 7,
+    "username": "امي فيرسون",
+    "role": "reader",
+    "email": "amy.virson@example.com",
+    "profile": {
+      "name": "امي فيرسون",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [2, 3],
+    "saved": [1, 4, 5]
+  },
+  {
+    "id": 8,
+    "username":"جون أستبري",
+    "role": "reader",
+    "email": "john.astbury@example.com",
+    "profile": {
+      "name": "جون أستبري",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [4],
+    "saved": [1, 2]
+  },
+  {
+    "id": 9,
+    "username": "جينيفر هان",
+    "role": "reader",
+    "email": "jennifer.han@example.com",
+    "profile": {
+      "name": "جينيفر هان",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [5],
+    "saved": [1, 2, 3]
+  },
+  {
+    "id": 10,
+    "username": "ريانا هوبكنز",
+    "role": "reader",
+    "email": "rianna.hopkins@example.com",
+    "profile": {
+      "name": "ريانا هوبكنز",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [6],
+    "saved": [1, 3, 4]
+  },
+  {
+    "id": 11,
+    "username": "ايمي بيكوك",
+    "role": "reader",
+    "email": "amy.peacock@example.com",
+    "profile": {
+      "name": "ايمي بيكوك",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [7],
+    "saved": [2, 3, 5]
+  },
+  {
+    "id": 12,
+    "username": "ايزلين ستوديو",
+    "role": "reader",
+    "email": "eizelin.studio@example.com",
+    "profile": {
+      "name": "ايزلين ستوديو",
+      "bio": "",
+      "avatar": ""
+    },
+    "socials": [],
+    "articles": [8],
+    "saved": [1, 4, 6]
+  }
+]

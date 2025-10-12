@@ -1,0 +1,168 @@
+.footer {
+  background-color: var(--color-background-light);
+  color: var(--color-text-body);
+  
+  font-family: var(--font-arabic-body);
+  direction: rtl;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid var(--color-accent-primary);
+  background-image: url('/images/alhamra.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; 
+ 
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0,0,0,0.5);
+  padding: 50px 20px 20px;
+  box-sizing: border-box;
+}
+
+
+.footer a {
+  text-decoration: none;
+ 
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #d1338f;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 0%;
+  gap: 20px;
+}
+
+.footerBrand,
+.footerNav,
+.footerNewsletter {
+  min-width: 200px;
+  flex: 1;
+}
+
+.footerBrand h2 {
+  font-family: var(--font-arabic-head); /* Using Arabic heading font */
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--color-button-primary-text);
+}
+
+.footerBrand p {
+  font-family: var(--font-arabic-body); /* Using Arabic body font */
+  font-size: 14px;
+  color: var(--color-background-light);
+}
+
+.footerNav h3,
+.footerSocial h3,
+.footerNewsletter h3 {
+  font-family: var(--font-arabic-head); /* Using Arabic heading font */
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #d1338f;
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerNav ul li {
+  margin-bottom: 8px;
+}
+
+.footerSocial {
+  margin-top: 25px;
+}
+
+.footerSocial .socialIcons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+.footerInput{
+  background-color: antiquewhite;
+  color :black;
+}
+.footerNewsletter form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footerNewsletter input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--color-accent-primary);
+  border-radius: 5px;
+  background: white;
+  color: black;
+  font-family: var(--font-arabic-body);
+}
+
+.footerNewsletter button {
+  background-color: var(--color-interactive);
+  color: var(--color-button-secondary-text);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  font-family: var(--font-arabic-body);
+}
+
+.footerNewsletter button:hover {
+  background-color: var(--color-button-secondary-hover);
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 1%;
+  font-size: 14px;
+  color: var(--color-background-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerNewsletter form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footerNewsletter input,
+  .footerNewsletter button {
+    width: 100%;
+  }
+
+  .footerSocial .socialIcons {
+    justify-content: center;
+  }
+}
+
+.logoImg {
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  box-sizing: border-box;
+  object-fit: contain;
+  display: block;
+  aspect-ratio: 1 / 1;
+}

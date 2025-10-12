@@ -1,0 +1,361 @@
+.header {
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  direction: rtl;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ justify-content: space-between;
+ 
+}
+.menuOpen {
+  /* When mobile menu is open, let header grow vertically and stack items */
+  flex-direction: column;
+  align-items: stretch;
+  height: auto;
+  padding-bottom: .5rem;
+}
+.logoRow {
+  /* Changed from 5% to 100% width to allow logo centering */
+  width:100%;
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: right;
+  
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+}
+.logo {
+  position: absolute;
+  top: 10px;              /* raise it above the bar (adjust as needed) */
+  margin-right: 10px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: right;
+  justify-content: center;
+  padding: 0;
+  gap: .5rem;
+  text-decoration: none;
+  font-family: var(--font-arabic-head);
+  font-weight: 700;
+  font-size: clamp(1.05rem,2vw,1.4rem);
+  color: var(--color-text-body);
+  pointer-events: auto;
+  
+}
+
+.logoImg {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--color-accent-primary);
+  border-radius: 50%;
+  object-fit: contain;
+  
+  background: var(--color-background-light);
+  box-shadow: 0 2px 4px rgba(166,133,99,.18);
+
+}
+
+.logo:hover {
+  color: var(--color-text-subheading);
+}
+
+/* Desktop Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2%;
+  height: 100%;
+  font-size: 24px;
+  width: 100%;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  place-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navListComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navLink {
+  color: var(--color-text-body);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  height: 100%;
+  font-family: var(--font-arabic-body);
+}
+
+.navLink:hover {
+  color: var( --color-button-secondary-hover);
+}
+
+.searchAndJoinNav {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: larger;
+  width: 20%;
+}
+
+.searchAndJoinNav .searchAndJoinList {
+  display: flex;
+  list-style: none;
+  place-items: right;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.joinButton {
+  background-color: var(--color-button-primary);
+  color: var(--color-button-secondary-text);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: var(--font-arabic-body);
+}
+
+.joinButton:hover {
+  background-color: var(  --color-button-primary-hover);
+  text-decoration: none;
+}
+
+
+.searchImg {
+  right: 1rem; /* Adjusted for RTL */
+  width: 1rem;
+  height: 1rem;
+  fill: var(--color-text-subheading);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0 ; /* Changed from right: 0 for RTL */
+  background-color: var(--color-background-light);
+  padding: 10px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.dropdownLink {
+  display: block;
+  padding: 8px 20px;
+  color: var(--color-text-body);
+  text-decoration: none;
+  font-family: var(--font-arabic-body);
+}
+
+.dropdownLink:hover {
+  background-color: color-mix(in srgb, var( --color-button-secondary-hover) 80%, transparent);
+  color: var(--color-text-body);
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text-body);
+  padding-bottom: 3px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0; /* Changed from right: 0 for RTL */
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var( --color-button-secondary-hover);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.dropdown:hover .navLink {
+  color: var( --color-button-secondary-hover);
+}
+
+.dropdown:hover .navLink::after {
+  width: 100%;
+}
+.searchGroup { /* streamlined (removed legacy .group hover variant) */
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  width: 44px;                  /* collapsed width */
+  height: 40px;
+  padding: .45rem .6rem;
+  background: var(--color-background-light);
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  cursor: text;
+  overflow: hidden;
+  transition: width .35s ease, background .25s, box-shadow .25s, border-color .25s;
+  position: relative;
+}
+
+.searchImg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: .8;
+}
+
+.searchInput {  /* removed legacy .input alias */
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: .8rem;
+  font-family: var(--font-arabic-body);
+  padding: 0;
+  transition: opacity .25s ease;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+/* Focus (keyboard) can also expand */
+.searchGroup:focus-within {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px rgba(167,136,96,.18);
+}
+
+/* OPEN (clicked / state = searchOpen) */
+.searchOpen .searchGroup {
+  width: 320px;
+  background: #fff;
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 4px 14px -6px rgba(0,0,0,.18);
+}
+
+.searchOpen .searchInput {
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  padding: 0 .5rem 0 .25rem;
+}
+
+/* Optional hover styling while open */
+.searchOpen .searchGroup:hover {
+  box-shadow: 0 4px 18px -4px rgba(0,0,0,.22);
+}
+
+/* Placeholder */
+.searchInput::placeholder {
+  color: #999;
+  font-size: .75rem;
+}
+
+/* Small/medium (mobile header active) */
+@media (max-width:960px) {
+  .searchOpen .searchGroup,
+  .searchOpen .group {
+    width: 100%;
+  }
+  /* Remove container padding on mobile so inner bar/menu naturally fills width */
+  .container {
+    padding: 0;
+    /* Always stack header children vertically and stretch to full width */
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .logoRow {
+    justify-content: center;
+    margin: 0 auto;
+    padding: .5rem 0;
+    max-width: none;
+    width: 100%;
+    box-shadow: none;
+  }
+  .logo {
+    border-radius: 0;
+  position: static;
+    top: auto;
+    margin: 0;
+    transform: none;
+    padding: 0;
+  }
+  .logoImg {
+        border-radius: 0;
+
+    width: 70px;
+    height: 70px;
+    padding: 4px;
+  }
+   .searchAndJoinNav {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    justify-content: center;
+    width: 100%;
+   }
+
+   .navLink,
+  .joinButton {
+    font-size: .88rem;
+    padding: .6rem .75rem;
+    
+  }
+}

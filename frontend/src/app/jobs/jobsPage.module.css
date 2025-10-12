@@ -1,0 +1,38 @@
+/* app/jobs/JobsPage.module.css */
+.mainContent {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.filtersSidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.resultsSection {
+  min-height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainContent {
+    width: 90%;
+    grid-template-columns: 280px 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+  
+  .filtersSidebar {
+    position: static;
+  }
+}
